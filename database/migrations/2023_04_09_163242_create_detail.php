@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('detail', function (Blueprint $table) {
-            $table->id();
-            $table->foreign('id')->references('id')->on('account'); 
+            $table->uuid();
+            $table->foreignId('user_id');
             $table->text('alamat');
             $table->string('no_hp');
             $table->timestamps();

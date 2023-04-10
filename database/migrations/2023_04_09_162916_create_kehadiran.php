@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('kehadiran', function (Blueprint $table) {
             $table->id();
-            $table->foreign('id')->references('id')->on('account'); 
+            $table->foreignId('user_id');
             $table->date('jam_masuk');
             $table->date('jam_keluar');
             $table->enum('status',['A', 'M', 'I', 'S']);
